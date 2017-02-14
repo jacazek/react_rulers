@@ -1,0 +1,149 @@
+
+.ruler-container {
+    opacity: .7;
+    pointer-events: none;
+}
+
+.ruler-container.horizontal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.ruler-container.vertical {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ruler {
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+}
+
+.ruler ul, .gridlines ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-size: .8em;
+}
+
+.ruler li {
+    overflow: hidden;
+    height: .25in;
+    width: .25in;
+    position: relative;
+}
+
+.vertical-gridlines li {
+    height: 24px;
+}
+
+.gridline-container {
+    pointer-events: none;
+}
+
+.gridline {
+    margin: 0px;
+    opacity: .5;
+}
+
+.horizontal-gridlines ul {
+    height: 100%;
+}
+
+.horizontal-gridlines li {
+    width: 24px;
+    height: 100%;
+    display:inline-block;
+}
+
+.vertical-gridlines .gridline {
+    border: none;
+    border-bottom: 1px dashed lightgray;
+    height: 100%;
+}
+
+.horizontal-gridlines .gridline {
+    border: none;
+    border-right: 1px dashed lightgray;
+    height: 100%;
+}
+
+.tick {
+    margin: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.tick-label {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+}
+
+.horizontal-ruler li {
+    display: inline-block;
+    vertical-align: top;
+    width: 24px;
+    text-align: left;
+}
+
+.horizontal-ruler .tick {
+    width: 1px;
+    border: none;
+    border-left: 1px solid black;
+}
+
+.horizontal-ruler .tick-label {
+    padding-top: .75em;
+}
+
+/* style for .25" markers */
+.horizontal-ruler ul :nth-child(2n) .tick {
+    height: 25%;
+}
+
+/* style for .5 inch markers */
+.horizontal-ruler ul :nth-child(4n-1) .tick {
+    height: 50%;
+}
+
+.vertical-ruler li {
+    text-align: left;
+    height: 24px;
+    vertical-align: bottom;
+}
+
+/* style for .25" markers */
+.vertical-ruler ul :nth-child(2n) .tick {
+    width: 25%;
+}
+
+/* style for .5 inch markers */
+.vertical-ruler ul :nth-child(4n-1) .tick {
+    width: 50%;
+}
+
+.vertical-ruler .tick {
+    height: 1px;
+    border: none;
+    border-top: 1px solid black;
+}
+
+.vertical-ruler .tick-label {
+    padding-left: .75em;
+}
+
+.ruler-guide {
+    position:absolute;
+    pointer-events: none;
+    border: 1px dotted grey;
+}

@@ -1,0 +1,12 @@
+The scroll container would live inside the ruler/grid system
+The ruler system would be relatively positioned and take 100% of its space.
+The scroll container would be relatively positioned within the ruler system
+The ruler system is composed of the following
+    - Main component
+    - Gridlines
+    - Rulers
+    - Guides
+    - Scroll container
+
+What are the inputs to each component?
+Who is responsible for providing those inputs (higher order components)
